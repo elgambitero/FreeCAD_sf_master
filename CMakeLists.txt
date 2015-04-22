@@ -176,6 +176,7 @@ OPTION(BUILD_START "Build the FreeCAD start module" ON)
 OPTION(BUILD_TEST "Build the FreeCAD test module" ON)
 OPTION(BUILD_WEB "Build the FreeCAD web module" ON)
 OPTION(BUILD_VR "Build the FreeCAD Oculus Rift support (need Oculus SDK 4.x or higher)" OFF)
+OPTION(BUILD_AIRCRAFT “Build the FreeCAD aircraft module” ON)
 
 if(MSVC)
     OPTION(FREECAD_USE_FREETYPE "Builds the features using FreeType libs" OFF)
