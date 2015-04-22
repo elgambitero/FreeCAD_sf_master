@@ -1,5 +1,8 @@
 # file types to ignore
 
+*/Mod/Aircraft/doc/
+
+
 *.pyc
 *.obj
 *.lib
