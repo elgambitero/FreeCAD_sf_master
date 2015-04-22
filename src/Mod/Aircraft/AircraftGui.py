@@ -1,7 +1,7 @@
 #***************************************************************************
 #*                                                                         *
 #*   Copyright (c) 2015                                                    *
-#*   Jaime Garcia Villena <unautomatico@gmail.com>                         *
+#*   Jaime Garcia Villena            <elgambitero@gmail.com>               *
 #*                                                                         *
 #*   This program is free software; you can redistribute it and/or modify  *
 #*   it under the terms of the GNU Lesser General Public License (LGPL)    *
@@ -21,9 +21,29 @@
 #*                                                                         *
 #***************************************************************************
 
+
 import PySide
 from PySide import QtCore, QtGui
 import FreeCAD
 import FreeCADGui
 import os
 
+FreeCADGui.addIconPath(":/Aircraft/icons")
+
+class NACAairfoil:
+    def Activated(self):
+        import NACAairfoil
+        NACAairfoil.load()
+
+    def GetResources(self):
+        MenuText=QtCore.QT_TRANSLATE_NOOP(
+            'Aircraft_NACA',
+            'Create NACA Airfoil')
+        ToolTip = QtCore.QT_TRANSLATE_NOOP(
+            'Aircraft_NACA',
+            'Makes a closed DWire with a NACA profile shape')
+        return {'Pixmap': 'Aircraft_NACA',
+                'MenuText': MenuText,
+                'ToolTip':ToolTip}
+
+FreeCADGui.addCommand('Aircraft_NACA',NACAairfoil())

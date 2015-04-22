@@ -21,22 +21,7 @@
 #*                                                                         *
 #***************************************************************************
 
+import TaskPanel
 
-class AircraftWorkbench(Workbench):
-    import AircraftGui
-
-    Icon = "AircraftLogo.svg"
-    MenuText= "Aircraft"
-    ToolTip= ("Module for making the hull of an aircraft")
-
-    def Initialize(self):
-        from PySide import QtCore, QtGui
-
-        aircraftList:["Aircraft_NACAairfoil"]
-
-        self.appendToolbar(
-            str(QtCore.QT_TRANSLATE_NOOP("Aircraft","Create NACA airfoil")),
-            aircraftList)
-
-
-Gui.addWorkbench(AircraftWorkbench())
+def load():
+    raise Exception("unimplemented")
