@@ -125,3 +125,7 @@ endif(BUILD_SPREADSHEET)
 if(BUILD_JTREADER)
   add_subdirectory(JtReader)
 endif(BUILD_JTREADER)
+
+if(BUILD_AIRCRAFT)
+  add_subdirectory(Aircraft)
+endif(BUILD_AIRCRAFT)

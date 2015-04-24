@@ -21,22 +21,22 @@
 #*                                                                         *
 #***************************************************************************
 
+class AircraftWorkbench ( Workbench ):
+	"Aircraft workbench object"
 
-class AircraftWorkbench(Workbench):
-    import AircraftGui
+        Icon = "AircraftLogo.svg"
+	MenuText = "Aircraft"
+	ToolTip= ("Module for making the hull of an aircraft")
+	def Initialize(self):
+		# load the module
+		import AircraftGui
+                aircraftList:["Aircraft_NACAairfoil"]
 
-    Icon = "AircraftLogo.svg"
-    MenuText= "Aircraft"
-    ToolTip= ("Module for making the hull of an aircraft")
+                self.appendToolbar(
+                    str(QtCore.QT_TRANSLATE_NOOP("Aircraft","Create NACA airfoil")),
+                    aircraftList)
 
-    def Initialize(self):
-        from PySide import QtCore, QtGui
-
-        aircraftList:["Aircraft_NACAairfoil"]
-
-        self.appendToolbar(
-            str(QtCore.QT_TRANSLATE_NOOP("Aircraft","Create NACA airfoil")),
-            aircraftList)
-
+	def GetClassName(self):
+		return "AircraftGui::Workbench"
 
 Gui.addWorkbench(AircraftWorkbench())

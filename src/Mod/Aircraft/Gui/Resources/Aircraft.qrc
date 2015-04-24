@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource>
+        <file>icons/AircraftLogo.svg</file>
+	<file>icons/NACAairfoil.svg</file>
+    </qresource>
+
+</RCC> 

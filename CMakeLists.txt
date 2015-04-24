@@ -329,6 +329,10 @@ if(BUILD_JTREADER)
   set(BUILD_MESH ON)
 endif(BUILD_JTREADER)
 
+if(BUILD_AIRCRAFT)
+	set(BUILD_MESH ON)
+endif(BUILD_AIRCRAFT)
+
 #leaving test module for someone else.
 #image has none. as far as I can tell.
 #mesh has none. as far as I can tell.
